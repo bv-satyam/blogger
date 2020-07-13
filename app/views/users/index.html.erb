@@ -1,16 +1,14 @@
 <h1>All Users</h1>
-<%= link_to 'Create User', new_user_path %>
+<%= link_to 'Create User', sign_up_path %>
 <table>
   <tr>
     <th>Email</th>
-    <th>Password</th>
     <th></th>
   </tr>
  
   <% @users.each do |user| %>
     <tr>
       <td><%= user.email %></td>
-      <td><%= user.password %></td>
       <td><%= link_to 'Show', user_path(user) %></td>
     </tr>
   <% end %>

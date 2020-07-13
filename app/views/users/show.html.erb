@@ -1,12 +1,4 @@
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  <strong>Hello <%= @user.email %></strong>
 </p>
- 
-<p>
-  <strong>password:</strong>
-  <%= @user.password %>
-</p>
-
-
-<%= link_to 'Back', users_path %>
+<%= link_to 'My Articles', user_articles_path(@user) %></td>
