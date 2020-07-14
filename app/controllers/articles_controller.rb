@@ -6,6 +6,10 @@ class ArticlesController < ApplicationController
     @articles = @user.articles.all
   end
 
+  def all
+  	@articles = Article.all
+	end
+
 	def new
 		@user = User.find(params[:user_id])
 		@article = Article.new
@@ -45,8 +49,9 @@ class ArticlesController < ApplicationController
 
 	def show
 		@user = User.find(params[:user_id])
-    @article = @user.articles.find(params[:id])
-  end
+		@article = @user.articles.find(params[:id])
+		# @article = Article.find(params[:id])
+	end
   
   private
 	  def article_params
